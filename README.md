@@ -30,6 +30,6 @@ _*NOTE: Pricing is not final. Claims written in this section are the sole invent
 
 ## How to contribute
 
-This is a community project operating under the loose framework of an OPEN open source project. For more, see [CONTRIBUTING.md].
+This is a community project operating under the loose framework of an OPEN open source project. For more, see [CONTRIBUTING.md](https://github.com/louh/what3emojis/blob/gh-pages/CONTRIBUTING.md).
 
 :metal: :octocat: :flags:
