@@ -1,4 +1,4 @@
-![](https://cloud.githubusercontent.com/assets/170270/8941912/ce23d1f8-3572-11e5-8f50-ba388d577b61.png)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 # what3emojis
 
