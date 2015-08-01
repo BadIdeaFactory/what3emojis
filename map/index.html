@@ -48,7 +48,11 @@
       polygon_icon: '../css/img/polygon_icon.png',
     }).addTo(map);
 
-    map.on('moveend', function () {
+    map.on('moveend', getEmoji)
+
+    getEmoji()
+
+    function getEmoji () {
       var center = map.getCenter()
       var lat = center.lat
       var lng = center.lng
@@ -56,11 +60,7 @@
       twemoji.parse(document.getElementById('emojis'), {
         size: '72x72'
       })
-    })
-
-    twemoji.parse(document.getElementById('emojis'), {
-      size: '72x72'
-    })
+    }
   </script>
 </body>
 </html>
