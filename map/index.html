@@ -4,6 +4,9 @@
   <meta charset='utf-8'>
   <title>what3emojis 🌍🚀📡 explore the map</title>
 
+  <script src='//twemoji.maxcdn.com/twemoji.min.js'></script>
+  <script src='../js/geohash.js'></script>
+
   <!-- Load Leaflet from CDN -->
   <link rel='stylesheet' href='//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css'>
   <script src='//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js'></script>
@@ -23,7 +26,7 @@
     </ul>
   </header>
   <div id='pin'>
-    <div id='emojis'><span id='emoji-1' class='emoji'>👒</span><span id='emoji-2' class='emoji'>🍱</span><span id='emoji-3' class='emoji'>🐉</span></div>
+    <div id='emojis'>👒🍱🐉</div>
   </div>
   <div id='map'></div>
   <script src='../js/leaflet-hash.js'></script>
@@ -44,21 +47,20 @@
       point_icon: '../css/img/point_icon.png',
       polygon_icon: '../css/img/polygon_icon.png',
     }).addTo(map);
-  </script>
-  <script>
-    var string = '👒🍱🐉'
-    var total = string.length
-    function pickOne () {
-      var pick = Math.floor(Math.random() * total)
-      console.log(string.charAt(pick))
-      return string.charAt(pick)
-    }
-    function changeEmoji () {
-      document.getElementById('emoji-1').textContent = pickOne()
-      document.getElementById('emoji-2').textContent = pickOne()
-      document.getElementById('emoji-3').textContent = pickOne()
-    }
-    //changeEmoji()
+
+    map.on('moveend', function () {
+      var center = map.getCenter()
+      var lat = center.lat
+      var lng = center.lng
+      document.getElementById('emojis').textContent = coordAt(lat, lng);
+      twemoji.parse(document.getElementById('emojis'), {
+        size: '72x72'
+      })
+    })
+
+    twemoji.parse(document.getElementById('emojis'), {
+      size: '72x72'
+    })
   </script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+{
+  "name": "what3emojis",
+  "version": "0.0.2",
+  "description": "The best way to address the world using humanity's only common, unambiguous language",
+  "main": "index.js",
+  "dependencies": {
+    "geohash-emoji": "^1.2.0",
+    "twemoji": "^1.4.1"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/louh/what3emojis.git"
+  },
+  "author": "Lou Huang <lou@louhuang.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/louh/what3emojis/issues"
+  },
+  "homepage": "http://www.what3emojis.com/"
+}

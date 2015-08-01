@@ -112,12 +112,12 @@ h1 .beta {
 
 #pin {
   position: absolute;
-  width: 200px;
-  height: 80px;
+  width: 176px;
+  height: 64px;
   top: 50%;
   left: 50%;
-  margin-top: -80px;
-  margin-left: -100px;
+  margin-top: -64px;
+  margin-left: -88px;
   background-color: rgba(237, 29, 36, 0.95);
   border-radius: 4px;
   z-index: 1000;
@@ -138,12 +138,16 @@ h1 .beta {
 
 #emojis {
   text-align: center;
-  font-size: 3.25em;
-  line-height: 85px;
+  font-size: 3em;
+  line-height: 64px;
 }
 
-.emoji:not(:last-of-type) {
-  margin-right: 6px;
+img.emoji {
+  width: 32px;
+}
+
+img.emoji:not(:last-of-type) {
+  margin-right: 16px;
 }
 
 ul.nav {
