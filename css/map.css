@@ -164,10 +164,9 @@ ul.nav {
 }
 
 .nav > li {
-  margin-left: 0;
+  margin-left: 6px;
   display: inline-block;
   color: white;
-  border: 2px solid transparent;
   padding: 0;
   line-height: 34px;
 }
@@ -182,7 +181,7 @@ ul.nav {
 }
 
 .nav > li:hover {
-  border-bottom-color: white;
+  border-bottom: 2px solid white;
 }
 
 .nav > li.login {
