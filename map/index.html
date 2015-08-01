@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>what3emojis 🌍🚀📡 explore the map</title>
+
+  <!-- Load Leaflet from CDN -->
+  <link rel='stylesheet' href='//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css'>
+  <script src='//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js'></script>
+
+  <!-- Load Pelias geocoding plugin after Leaflet -->
+  <link rel='stylesheet' href='../css/pelias-leaflet-geocoder.css'>
+  <script src='../js/pelias-leaflet-geocoder.js'></script>
+  <link rel='stylesheet' href='../css/map.css'>
+</head>
+<body>
+  <header>
+    <h1>what3emojis<span class='beta'>beta</span></h1>
+    <ul class='nav'>
+      <li><a href='/'>About</a></li>
+      <li><a href='https://github.com/louh/what3emojis/'>GitHub</a></li>
+      <li class='login'><a href='/login'>Login</a></li>
+    </ul>
+  </header>
+  <div id='pin'>
+    <div id='emojis'><span id='emoji-1' class='emoji'>👒</span><span id='emoji-2' class='emoji'>🍱</span><span id='emoji-3' class='emoji'>🐉</span></div>
+  </div>
+  <div id='map'></div>
+  <script src='../js/leaflet-hash.js'></script>
+  <script src='../js/geolocator.js'></script>
+  <script>
+    // Create a basic Leaflet map
+    var accessToken = 'pk.eyJ1IjoibG91IiwiYSI6IkJDYlg3REEifQ.9BLp9eUdT11kUy1jgujSsQ';
+    var map = L.map('map').setView([40.7259, -73.9805], 12);
+    L.tileLayer('https://api.mapbox.com/v4/lou.n26nngnj/{z}/{x}/{y}.png?access_token=' + accessToken, {
+      attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var hash = new L.Hash(map);
+
+    // Add Pelias geocoding plugin
+    L.control.geocoder({
+      drop_pin: false,
+      point_icon: '../css/img/point_icon.png',
+      polygon_icon: '../css/img/polygon_icon.png',
+    }).addTo(map);
+  </script>
+  <script>
+    var string = '👒🍱🐉'
+    var total = string.length
+    function pickOne () {
+      var pick = Math.floor(Math.random() * total)
+      console.log(string.charAt(pick))
+      return string.charAt(pick)
+    }
+    function changeEmoji () {
+      document.getElementById('emoji-1').textContent = pickOne()
+      document.getElementById('emoji-2').textContent = pickOne()
+      document.getElementById('emoji-3').textContent = pickOne()
+    }
+    //changeEmoji()
+  </script>
+</body>
+</html>

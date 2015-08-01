@@ -1,0 +1,184 @@
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+#map {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+}
+
+.mz-geolocator {
+  top: 122px !important;
+}
+
+/* Leaflet and Pelias overrides */
+.pelias-input {
+  background-image: url("../img/search.png");
+  padding-left: 40px;
+  background-position: 9px center;
+}
+.leaflet-left .pelias-control {
+  margin-left: -150px;
+}
+
+.leaflet-top .pelias-control {
+  margin-top: 0;
+}
+.pelias-control {
+  position: fixed;
+  left: 50%;
+  top: 80px;
+}
+.pelias-control.pelias-expanded {
+  width: 300px; /* note: css tacks on an additional 30px w/o border-box */
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+  .pelias-input {
+    background-image: url("../img/search@2x.png");
+  }
+  .pelias-control.pelias-expanded .pelias-input {
+    background-image: url("../img/search@2x.png");
+  }
+}
+
+.leaflet-control-attribution {
+  background-color: #58595b;
+}
+.leaflet-bottom.leaflet-right {
+  width: 100%;
+}
+.leaflet-control-attribution.leaflet-control {
+  background: #58595b;
+  color: white;
+  width: 100%;
+  font-size: 10px;
+  font-family: 'Maven Pro';
+  height: 20px;
+  line-height: 20px;
+  float: none;
+  text-align: right;
+}
+
+.leaflet-control-attribution.leaflet-control a {
+  color: white;
+}
+
+header {
+  position: absolute;
+  background-color: #ea222e;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  line-height: 50px;
+  font-weight: 400;
+  font-size: 18px;
+  margin-left: 1em;
+}
+
+h1 .beta {
+  font-size: 65%;
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  margin-left: 2px;
+}
+
+#pin {
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -100px;
+  background-color: rgba(237, 29, 36, 0.95);
+  border-radius: 4px;
+  z-index: 1000;
+  color: white;
+}
+
+#pin::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -48px;
+  left: 50%;
+  margin-left: -24px;
+  border: 24px solid transparent;
+  border-top-color: rgba(237, 29, 36, 0.95);
+  z-index: 1000;
+}
+
+#emojis {
+  text-align: center;
+  font-size: 3.25em;
+  line-height: 85px;
+}
+
+.emoji:not(:last-of-type) {
+  margin-right: 6px;
+}
+
+ul.nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 6px;
+  margin: 0;
+  margin-right: 1em;
+  list-style-type: none;
+  font-weight: 700;
+  font-size: 13px;
+  height: 100%;
+}
+
+.nav > li {
+  margin-left: 0;
+  display: inline-block;
+  color: white;
+  border: 2px solid transparent;
+  padding: 0;
+  line-height: 34px;
+}
+
+.nav > li > a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.nav > li:hover {
+  border-bottom-color: white;
+}
+
+.nav > li.login {
+  border: 2px solid white;
+  border-radius: 2px;
+}
