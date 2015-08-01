@@ -4,8 +4,10 @@
   <meta charset='utf-8'>
   <title>what3emojis 🌍🚀📡 explore the map</title>
 
-  <script src='//twemoji.maxcdn.com/twemoji.min.js'></script>
   <script src='../js/geohash.js'></script>
+
+  <script src='//cdn.jsdelivr.net/emojione/1.5.0/lib/js/emojione.min.js'></script>
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/emojione/1.5.0/assets/css/emojione.min.css'>
 
   <!-- Load Leaflet from CDN -->
   <link rel='stylesheet' href='//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css'>
@@ -56,10 +58,9 @@
       var center = map.getCenter()
       var lat = center.lat
       var lng = center.lng
-      document.getElementById('emojis').textContent = coordAt(lat, lng);
-      twemoji.parse(document.getElementById('emojis'), {
-        size: '72x72'
-      })
+      var emoji = coordAt(lat, lng)
+      var output = emojione.unicodeToImage(emoji)
+      document.getElementById('emojis').innerHTML = output
     }
   </script>
 </body>

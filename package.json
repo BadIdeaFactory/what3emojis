@@ -4,8 +4,8 @@
   "description": "The best way to address the world using humanity's only common, unambiguous language",
   "main": "index.js",
   "dependencies": {
-    "geohash-emoji": "^1.2.0",
-    "twemoji": "^1.4.1"
+    "emojione": "^1.5.0",
+    "geohash-emoji": "^1.2.0"
   },
   "devDependencies": {
     "browserify": "^11.0.1"

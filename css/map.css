@@ -142,11 +142,12 @@ h1 .beta {
   line-height: 64px;
 }
 
-img.emoji {
+img.emojione {
   width: 32px;
+  height: 32px;
 }
 
-img.emoji:not(:last-of-type) {
+img.emojione:not(:last-of-type) {
   margin-right: 16px;
 }
 
