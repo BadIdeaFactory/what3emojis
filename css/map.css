@@ -32,6 +32,9 @@ body {
   padding-left: 40px;
   background-position: 9px center;
 }
+.pelias-control.pelias-expanded .pelias-input {
+  background-image: url("../img/search.png");
+}
 .leaflet-left .pelias-control {
   margin-left: -150px;
 }
