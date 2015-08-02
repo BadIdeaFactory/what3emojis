@@ -2,6 +2,36 @@
 
 Contributions welcome!
 
+**Before spending lots of time on something, ask for feedback on your idea first!**
+
+Please search issues and pull requests before adding something new to avoid duplicating efforts and conversations.
+
+In addition to improving the project by refactoring code and and implementing relevant features, this project welcomes the following types of contributions:
+
+- **Ideas**: participate in an issue thread or start your own to have your voice heard.
+- **Writing**: contribute your expertise in an area by helping expand the included content.
+- **Copy editing**: fix typos, clarify language, and generally improve the quality of the content.
+- **Formatting**: help keep content easy to read with consistent formatting.
+
+## Installing
+
+Fork and clone the repo, then `npm install` to install all dependencies.
+
+The `app` folder has the actual app, and it has its own `package.json`. If you are adding a dependency to the app, add it to `app/package.json`. The top level `package.json` has the build `devDependencies` (like electron).
+
+## Testing
+
+Tests are run with `npm test`. Please ensure all tests are passing before submitting a pull request (unless you're creating a failing test to increase test coverage or show a problem).
+
+## Code Style
+
+[![standard][standard-image]][standard-url]
+
+This repository uses [`standard`][standard-url] to maintain code style and consistency, and to avoid style arguments. `npm test` runs `standard` so you don't have to!
+
+[standard-image]: https://cdn.rawgit.com/feross/standard/master/badge.svg
+[standard-url]: https://github.com/feross/standard
+
 ---
 
 # Collaborating Guidelines
