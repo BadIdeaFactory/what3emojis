@@ -55,11 +55,16 @@
       drop_pin: false,
       point_icon: '../css/img/point_icon.png',
       polygon_icon: '../css/img/polygon_icon.png',
+      full_width: false, // Handle this ourselves.
     }).addTo(map);
 
     map.on('moveend', getEmoji)
 
     getEmoji()
+
+    if (document.getElementById('map').className.indexOf('leaflet-touch') > 0) {
+      document.body.className += ' leaflet-touch'
+    }
 
     function getEmoji () {
       var center = map.getCenter()

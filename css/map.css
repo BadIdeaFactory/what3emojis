@@ -26,6 +26,21 @@ body {
   top: 122px !important;
 }
 
+.leaflet-touch .mz-geolocator {
+  top: 60px !important;
+  left: auto;
+  right: 10px;
+}
+
+.leaflet-touch .mz-geolocator-button {
+  /* mimic leaflet-bar */
+  border: 2px solid rgba(0,0,0,0.2);
+  background-clip: padding-box;
+  box-shadow: none;
+  width: 48px;
+  height: 48px;
+}
+
 /* Leaflet and Pelias overrides */
 .pelias-input {
   background-image: url("../img/search.png");
@@ -42,13 +57,55 @@ body {
 .leaflet-top .pelias-control {
   margin-top: 0;
 }
+
 .pelias-control {
   position: fixed;
   left: 50%;
   top: 80px;
 }
+
+@media only screen and (max-width: 650px) {
+  .pelias-control {
+    top: 60px;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .leaflet-touch .pelias-control {
+    top: 60px;
+  }
+}
+
 .pelias-control.pelias-expanded {
-  width: 300px; /* note: css tacks on an additional 30px w/o border-box */
+  width: 300px; /* note - css tacks on an additional 30px w/o border-box */
+}
+
+@media only screen and (max-width: 650px) {
+  .pelias-control.pelias-expanded {
+    width: calc(100% - 100px)
+  }
+
+  .leaflet-left .pelias-control {
+    margin-left: calc((100% - 100px) / -2);
+  }
+}
+
+.leaflet-touch .pelias-control.pelias-expanded {
+  height: 48px; /* include height of border on mobile */
+}
+
+@media only screen and (max-width: 650px) {
+  .leaflet-touch .pelias-control.pelias-expanded {
+    left: 10px;
+    margin-left: 0;
+    width: calc(100% - 78px);
+  }
+}
+
+/* Hide zoom controls on mobile */
+@media only screen and (max-width: 650px) {
+  .leaflet-touch .leaflet-control-zoom {
+    display: none;
+  }
 }
 
 @media only screen and (min--moz-device-pixel-ratio: 2),
@@ -63,6 +120,15 @@ only screen and (min-device-pixel-ratio: 2) {
   }
 }
 
+.pelias-results {
+  top: 36px;
+}
+
+.leaflet-touch .pelias-results {
+  top: 40px;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.2) !important;
+}
+
 .leaflet-control-attribution {
   background-color: #58595b;
 }
@@ -75,10 +141,9 @@ only screen and (min-device-pixel-ratio: 2) {
   width: 100%;
   font-size: 10px;
   font-family: 'Maven Pro';
-  height: 20px;
-  line-height: 20px;
   float: none;
   text-align: right;
+  padding: 3px 6px;
 }
 
 .leaflet-control-attribution.leaflet-control a {
@@ -100,6 +165,12 @@ header h1 {
   font-weight: 400;
   font-size: 18px;
   margin-left: 1em;
+}
+
+@media only screen and (max-width: 650px) {
+  header h1 {
+    margin-left: 12px;
+  }
 }
 
 h1 .beta {
@@ -167,6 +238,12 @@ ul.nav {
   font-weight: 700;
   font-size: 13px;
   height: 100%;
+}
+
+@media only screen and (max-width: 650px) {
+  ul.nav {
+    margin-right: 6px;
+  }
 }
 
 .nav > li {
