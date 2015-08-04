@@ -39,7 +39,13 @@ body {
   box-shadow: none;
   width: 48px;
   height: 48px;
+  border-radius: 6px; /* ??? */
 }
+
+.leaflet-touch .mz-geolocator-icon {
+  background-size: 60%;
+}
+
 
 /* Leaflet and Pelias overrides */
 .pelias-input {
