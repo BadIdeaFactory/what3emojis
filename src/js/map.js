@@ -3,12 +3,16 @@
 var L = require('leaflet')
 var LHash = require('leaflet-hash')
 var geocoder = require('leaflet-geocoder')
-var geohash = require('geohash-emoji')
+//var geohash = require('geohash-emoji')
+var geohash = require('../../js/geohash.js')
 var emojione = require('emojione')
 
 // Create a basic Leaflet map
 var accessToken = 'pk.eyJ1IjoibG91IiwiYSI6IkJDYlg3REEifQ.9BLp9eUdT11kUy1jgujSsQ'
 var map = L.map('map').setView([51.4700, 0.2592], 12)
+
+var geolocator = require('mapzen-ui/src/components/geolocator/geolocator.js')(map)
+
 var tileUrl = 'https://api.mapbox.com/v4/lou.n26nngnj/{z}/{x}/{y}.png'
 if (window.devicePixelRatio >= 2) {
   tileUrl = 'https://api.mapbox.com/v4/lou.n26nngnj/{z}/{x}/{y}@2x.png'

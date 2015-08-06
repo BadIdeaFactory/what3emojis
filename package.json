@@ -8,7 +8,10 @@
     "emojione": "^1.5.0",
     "geohash-emoji": "^1.2.0",
     "jquery": "^2.1.4",
-    "leaflet-geocoder": "git+https://github.com/pelias/leaflet-geocoder.git#v0.0.3"
+    "leaflet": "^0.7.3",
+    "leaflet-geocoder": "git+https://github.com/pelias/leaflet-geocoder.git#v0.0.3",
+    "leaflet-hash": "^0.2.1",
+    "mapzen-ui": "git+https://github.com/mapzen/ui.git#0.4.0"
   },
   "devDependencies": {
     "browserify": "^11.0.1",

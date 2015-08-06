@@ -48,59 +48,59 @@ body {
 
 
 /* Leaflet and Pelias overrides */
-.pelias-input {
+.leaflet-pelias-input {
   background-image: url("../img/search.png");
   padding-left: 40px;
   background-position: 9px center;
 }
-.pelias-control.pelias-expanded .pelias-input {
+.leaflet-pelias-control.leaflet-pelias-expanded .leaflet-pelias-input {
   background-image: url("../img/search.png");
 }
-.leaflet-left .pelias-control {
+.leaflet-left .leaflet-pelias-control {
   margin-left: -150px;
 }
 
-.leaflet-top .pelias-control {
+.leaflet-top .leaflet-pelias-control {
   margin-top: 0;
 }
 
-.pelias-control {
+.leaflet-pelias-control {
   position: fixed;
   left: 50%;
   top: 80px;
 }
 
 @media only screen and (max-width: 650px) {
-  .pelias-control {
+  .leaflet-pelias-control {
     top: 60px;
   }
 }
 @media only screen and (orientation: landscape) {
-  .leaflet-touch .pelias-control {
+  .leaflet-touch .leaflet-pelias-control {
     top: 60px;
   }
 }
 
-.pelias-control.pelias-expanded {
+.leaflet-pelias-control.leaflet-pelias-expanded {
   width: 300px; /* note - css tacks on an additional 30px w/o border-box */
 }
 
 @media only screen and (max-width: 650px) {
-  .pelias-control.pelias-expanded {
+  .leaflet-pelias-control.leaflet-pelias-expanded {
     width: calc(100% - 100px)
   }
 
-  .leaflet-left .pelias-control {
+  .leaflet-left .leaflet-pelias-control {
     margin-left: calc((100% - 100px) / -2);
   }
 }
 
-.leaflet-touch .pelias-control.pelias-expanded {
+.leaflet-touch .leaflet-pelias-control.leaflet-pelias-expanded {
   height: 48px; /* include height of border on mobile */
 }
 
 @media only screen and (max-width: 650px) {
-  .leaflet-touch .pelias-control.pelias-expanded {
+  .leaflet-touch .leaflet-pelias-control.leaflet-pelias-expanded {
     left: 10px;
     margin-left: 0;
     width: calc(100% - 78px);
@@ -118,19 +118,19 @@ body {
 only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
-  .pelias-input {
+  .leaflet-pelias-input {
     background-image: url("../img/search@2x.png");
   }
-  .pelias-control.pelias-expanded .pelias-input {
+  .leaflet-pelias-control.leaflet-pelias-expanded .leaflet-pelias-input {
     background-image: url("../img/search@2x.png");
   }
 }
 
-.pelias-results {
+.leaflet-pelias-results {
   top: 36px;
 }
 
-.leaflet-touch .pelias-results {
+.leaflet-touch .leaflet-pelias-results {
   top: 40px;
   box-shadow: 0 0 0 2px rgba(0,0,0,0.2) !important;
 }
