@@ -3,7 +3,6 @@
 var gulp = require('gulp')
 var gutil = require('gulp-util')
 var livereload = require('gulp-livereload')
-var sourcemaps = require('gulp-sourcemaps')
 
 var paths = {
   styles: 'src/css/**/*.scss',
@@ -32,20 +31,30 @@ gulp.task('js', function () {
   var source = require('vinyl-source-stream')
   var buffer = require('vinyl-buffer')
   var uglify = require('gulp-uglify')
+  var sourcemaps = require('gulp-sourcemaps')
+  var es = require('event-stream')
 
-  var bundle = browserify({
-    entries: 'src/js/index.js'
+  var entries = [
+    'main',
+    'map'
+  ]
+
+  // Create a stream array
+  var tasks = entries.map(function (entry) {
+    // see package.json for transforms
+    return browserify({ entries: ['src/js/' + entry + '.js'] })
+      .bundle()
+      .pipe(source(entry + '.min.js'))
+      .pipe(buffer())
+      .pipe(sourcemaps.init({ loadMaps: true }))
+        // Add transformation tasks to the pipeline here.
+        .pipe(uglify())
+        .on('error', gutil.log)
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest('./js'))
   })
 
-  return bundle.bundle()
-    .pipe(source('main.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({ loadMaps: true }))
-      // Add transformation tasks to the pipeline here.
-      .pipe(uglify())
-      .on('error', gutil.log)
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./js'))
+  return es.merge.apply(null, tasks)
 })
 
 gulp.task('watch', function () {

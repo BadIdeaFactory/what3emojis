@@ -7,11 +7,13 @@
     "bootstrap-sass": "^3.3.5",
     "emojione": "^1.5.0",
     "geohash-emoji": "^1.2.0",
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "leaflet-geocoder": "git+https://github.com/pelias/leaflet-geocoder.git#v0.0.3"
   },
   "devDependencies": {
     "browserify": "^11.0.1",
     "browserify-shim": "^3.8.10",
+    "event-stream": "^3.3.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-cssimport": "^2.1.0",
