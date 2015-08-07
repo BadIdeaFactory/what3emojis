@@ -11,20 +11,38 @@
   <link rel='stylesheet' href='//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css'>
   <link rel='stylesheet' href='../css/pelias-leaflet-geocoder.css'>
   <link rel='stylesheet' href='../css/map.css'>
+
+  <link rel='stylesheet' href='/css/styles.css'>
 </head>
 <body>
-  <header>
-    <h1>what3emojis<span class='beta'>beta</span></h1>
-    <ul class='nav'>
-      <li><a href='/'>About</a></li>
-      <li><a href='https://github.com/louh/what3emojis/'>GitHub</a></li>
-      <li class='login'><a href='/login'>Login</a></li>
-    </ul>
-  </header>
+
+  <nav class='navbar navbar-default navbar-inverse'>
+    <div class='container-fluid'>
+      <div class='navbar-header'>
+        <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
+          <span class='sr-only'>Toggle navigation</span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+        </button>
+        <a class='navbar-brand' href='#'>what3emojis<span class='beta'>beta</span></a>
+      </div>
+      <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+        <ul class='nav navbar-nav navbar-right'>
+          <li><a href='/'>About</a></li>
+          <li><a href='https://github.com/louh/what3emojis/'>GitHub</a></li>
+          <li class='login'><a href='/login'>Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <div id='pin'>
     <div id='emojis'><!-- JS puts emoji here --></div>
   </div>
   <div id='map'></div>
-  <script src='../js/map.min.js'></script>
+
+  <script src='/js/main.min.js'></script>
+  <script src='/js/map.min.js'></script>
 </body>
 </html>

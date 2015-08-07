@@ -4,11 +4,40 @@
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>what3emojis</title>
-  <link rel='stylesheet' href='css/styles.css'>
+  <link rel='stylesheet' href='/css/styles.css'>
 </head>
 <body>
-  <p>👋🌎❗</p>
-  <p><a href='/map'>explore map</a></p>
-  <script src='js/main.min.js'></script>
+
+  <nav class='navbar navbar-default navbar-inverse'>
+    <div class='container-fluid'>
+      <div class='navbar-header'>
+        <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
+          <span class='sr-only'>Toggle navigation</span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+        </button>
+        <a class='navbar-brand' href='#'>what3emojis<span class='beta'>beta</span></a>
+      </div>
+      <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+        <ul class='nav navbar-nav navbar-right'>
+          <li><a href='/'>About</a></li>
+          <li><a href='https://github.com/louh/what3emojis/'>GitHub</a></li>
+          <li class='login'><a href='/login'>Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <p>👋🌎❗</p>
+        <p><a href='/map'>explore map</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src='/js/main.min.js'></script>
 </body>
 </html>
