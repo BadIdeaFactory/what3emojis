@@ -7,11 +7,14 @@
 
 @import 'navbar';
 
-body {
-  text-align: center;
-}
+@import 'map'; // Map page base
+@import 'leaflet-overrides';
 
-p:first-child {
-  font-size: 400%;
-  margin-top: 3em;
+body.main {
+  text-align: center;
+
+  p:first-child {
+    font-size: 400%;
+    margin-top: 3em;
+  }
 }
