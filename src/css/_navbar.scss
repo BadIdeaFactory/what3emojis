@@ -1,10 +1,11 @@
 
 .navbar {
-  font-family: 'Maven Pro', sans-serif;
   z-index: 3000;
 }
 
 .navbar-brand {
+  font-weight: 300;
+
   .beta {
     font-size: 0.65em;
     margin-left: 0.2em;
@@ -13,6 +14,7 @@
 }
 
 .navbar-nav {
+  font-family: 'Maven Pro', sans-serif;
   text-align: center;
 
   li {
@@ -20,10 +22,25 @@
     font-size: 13px;
   }
 
-  li.login {
+  li.login,
+  li.map {
     border: 2px solid white;
     border-radius: 2px;
     margin: auto 10px;
+  }
+
+  li.map {
+    background-color: white;
+    font-weight: 400;
+    border-bottom-width: 0 !important;
+    box-shadow: 0 2px 0 0 lightgray;
+
+    a,
+    a:hover,
+    a:active,
+    a:visited {
+      color: #ea222e;
+    }
   }
 }
 
@@ -35,7 +52,8 @@
       margin-left: 8px;
     }
 
-    li.login {
+    li.login,
+    li.map {
       border: 2px solid white;
       border-radius: 2px;
 
@@ -43,7 +61,7 @@
       margin-top: -2px;
 
       // Override all other margins
-      margin-left: 8px;
+      margin-left: 16px;
       margin-right: 0;
     }
 
@@ -57,5 +75,3 @@
     }
   }
 }
-
-//RGBA(233, 47, 56, 1)

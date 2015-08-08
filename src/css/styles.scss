@@ -1,20 +1,301 @@
 @charset 'utf-8';
 
-@import url(http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700);
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Roboto:200,400,300,300italic);
+
+$primary-color: #ea222e;
 
 @import 'bootstrap-variables';
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
 @import 'navbar';
+@import 'buttons';
 
 @import 'map'; // Map page base
 @import 'leaflet-overrides';
 
 body.main {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+      padding: 80px 0;
+  }
+}
+
+.jumbotron {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  margin-bottom: 0;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  background-repeat: no-repeat;
+  background-image: url(/img/slideshow01.jpg);
+  background-size: cover;
+  background-position: center center;
+
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: 200px;
+    padding-bottom: 120px;
+  }
+
+  .lead {
+    @media (min-width: $grid-float-breakpoint) {
+      width: 85%;
+      font-size: 2.25em;
+      margin: 0 auto;
+    }
+  }
+
+  .container {
+    max-width: 85%;
+
+    @media (min-width: $grid-float-breakpoint) {
+      max-width: 100%;
+    }
+  }
+}
+
+.jumbotron-button {
+  margin-top: 40px;
+
+  @media (min-width: $grid-float-breakpoint) {
+    margin-top: 80px;
+  }
+}
+
+.jumbotron-photo-credit {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+  text-align: right;
+  font-size: 9px;
+  font-weight: 300;
+
+  a,
+  a:active,
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .cc {
+    margin-left: 0.33em;
+    opacity: 0.6;
+  }
+}
+
+.explore-map-button {
+  display: block;
+  padding: 20px 32px;
+  border-radius: 3px;
+  width: 100%;
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
+  font-family: 'Maven Pro', sans-serif;
+  background-color: $primary-color;
+  box-shadow: 0 2px 0 #c4101c;
+
+  @media (min-width: $grid-float-breakpoint) {
+    display: inline-block;
+    padding: 26px 32px;
+    width: auto;
+    min-width: 180px;
+  }
+
+  &:hover,
+  &:active,
+  &:visited {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.featurette {
+  padding: 50px 0;
+  color: #4d4d4d;
+  background-color: #f8f8f8;
   text-align: center;
 
-  p:first-child {
-    font-size: 400%;
-    margin-top: 3em;
+  hr {
+    margin: 40px auto;
   }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.1em;
+    margin-bottom: 30px;
+  }
+
+  .lead {
+    font-weight: 200;
+    font-size: 20px;
+  }
+
+  .boom {
+    font-weight: 200;
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.intro {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.triptych {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .emojione {
+    width: 128px;
+    height: 128px;
+  }
+
+  h3 {
+    font-weight: 300;
+    margin: 20px auto;
+  }
+
+  p {
+    font-weight: 200;
+    line-height: 1.5;
+  }
+}
+
+.triangles img {
+  width: 16px;
+  height: 16px;
+}
+
+.x-mark {
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+
+.featurette-alt {
+  background-color: white;
+}
+
+.package-hero {
+  //background-image: url(/img/package.jpg);
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  //min-height: 300px;
+  //height: 600px;
+  padding: 0;
+
+  p {
+    text-align: left;
+    color: white;
+    font-weight: 300;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  }
+
+  .overlay {
+    max-width: 100%;
+    background-color: rgba(0,0,0,0.65);
+    padding: 40px;
+
+    @media (min-width: $grid-float-breakpoint) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      max-width: 400px;
+      padding-top: 160px;
+    }
+
+  }
+
+}
+
+.quote {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+.quote-mark {
+  color: #e6313e;
+  font-size: 2em;
+  font-family: serif;
+  line-height: 1em;
+  vertical-align: sub;
+}
+
+.quote-attribution {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+footer {
+  background-color: #4d4d4d;
+  min-height: 300px;
+  color: #eee;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (max-width: $grid-float-breakpoint) {
+    .col-md-3,
+    .col-md-6 {
+      min-width: 300px;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  h4 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  li {
+    margin-bottom: 0.2em;
+  }
+
+  li a {
+    color: #eee;
+    font-weight: 200;
+  }
+
+  a:hover,
+  a:active,
+  a:visited {
+    color: #eee;
+  }
+
+  .twitter-timeline {
+    margin: 0 auto;
+  }
+}
+
+.copyright {
+  background-color: #4d4d4d;
+  border-top: 1px solid #777;
+  padding: 20px 0;
+  color: #aaa;
+  font-size: 12px;
 }
