@@ -14,8 +14,11 @@ $primary-color: #ea222e;
 @import 'leaflet-overrides';
 
 body.main {
-  font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 @media (min-width: 768px) {
