@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-@import url(http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Roboto:200,400,300,300italic);
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Roboto:200,400,300,300italic);
 
 $primary-color: #ea222e;
 
@@ -56,6 +56,26 @@ body.main {
       max-width: 100%;
     }
   }
+}
+
+body.login {
+  .jumbotron {
+    background-image: url(/img/slideshow02.jpg);
+  }
+  .jumbotron .container {
+    padding: 40px;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .subscribe {
+    margin-top: 40px;
+  }
+}
+
+.fineprint {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 10px !important;
+  opacity: 0.8;
 }
 
 .jumbotron-button {
@@ -217,17 +237,27 @@ body.main {
       height: 100%;
       max-width: 400px;
       padding-top: 160px;
+      display: flex;
     }
-
   }
 
+  @media (min-width: $grid-float-breakpoint) {
+    .overlay-text {
+      align-self: flex-end;
+    }
+    .btn-lg {
+      margin: auto;
+    }
+  }
 }
 
 .quote {
-  white-space: nowrap;
-  overflow-x: auto;
   padding-bottom: 20px;
   margin-bottom: 0;
+}
+
+.keep-together {
+  white-space: nowrap;
 }
 
 .quote-mark {
@@ -250,15 +280,6 @@ footer {
   color: #eee;
   padding-top: 40px;
   padding-bottom: 40px;
-
-  @media (max-width: $grid-float-breakpoint) {
-    .col-md-3,
-    .col-md-6 {
-      min-width: 300px;
-      max-width: 80%;
-      margin: 0 auto;
-    }
-  }
 
   h4 {
     text-transform: uppercase;
