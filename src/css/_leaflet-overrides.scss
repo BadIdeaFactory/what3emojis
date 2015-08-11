@@ -6,8 +6,8 @@
 /* Leaflet and Pelias overrides */
 .leaflet-pelias-search-icon {
   background-image: url("../img/search.png");
-  padding-left: 40px;
-  background-position: 9px center;
+  width: 40px;
+  background-size: 24px;
 }
 .leaflet-pelias-control.leaflet-pelias-expanded .leaflet-pelias-search-icon {
   background-image: url("../img/search.png");
@@ -82,7 +82,7 @@ only screen and (min-device-pixel-ratio: 2) {
 }
 
 .leaflet-pelias-input {
-  padding-left: 30px;
+  padding-left: 34px;
 }
 
 .leaflet-pelias-results {
