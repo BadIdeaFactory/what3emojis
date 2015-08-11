@@ -1,42 +1,20 @@
 // TODO: Streamline
 
 // Inline the leaflet-geocoder styles
-@import '../../node_modules/leaflet-geocoder/dist/pelias-leaflet-geocoder.css';
-
-.leaflet-touch .mz-geolocator {
-  top: 60px !important;
-  left: auto;
-  right: 10px;
-}
-
-.leaflet-touch .mz-geolocator-button {
-  /* mimic leaflet-bar */
-  border: 2px solid rgba(0,0,0,0.2);
-  background-clip: padding-box;
-  box-shadow: none;
-  width: 48px;
-  height: 48px;
-  border-radius: 6px; /* ??? */
-}
-
-.leaflet-touch .mz-geolocator-icon {
-  background-size: 60%;
-}
-
+@import '../../node_modules/pelias-leaflet-geocoder/dist/pelias-leaflet-geocoder.css';
 
 /* Leaflet and Pelias overrides */
-.leaflet-pelias-input {
+.leaflet-pelias-search-icon {
   background-image: url("../img/search.png");
   padding-left: 40px;
   background-position: 9px center;
 }
-.leaflet-pelias-control.leaflet-pelias-expanded .leaflet-pelias-input {
+.leaflet-pelias-control.leaflet-pelias-expanded .leaflet-pelias-search-icon {
   background-image: url("../img/search.png");
 }
 .leaflet-left .leaflet-pelias-control {
   margin-left: -150px;
 }
-
 .leaflet-top .leaflet-pelias-control {
   margin-top: 0;
 }
@@ -95,12 +73,16 @@
 only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
-  .leaflet-pelias-input {
+  .leaflet-pelias-search-icon {
     background-image: url("../img/search@2x.png");
   }
-  .leaflet-pelias-control.leaflet-pelias-expanded .leaflet-pelias-input {
+  .leaflet-pelias-control.leaflet-pelias-expanded .leaflet-pelias-search-icon {
     background-image: url("../img/search@2x.png");
   }
+}
+
+.leaflet-pelias-input {
+  padding-left: 30px;
 }
 
 .leaflet-pelias-results {

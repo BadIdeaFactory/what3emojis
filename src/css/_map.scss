@@ -6,9 +6,34 @@
   height: calc(100% - 50px);
 }
 
+//
+// Borrowed the Mapzen 'Locate me' button
+// -----------------------------------------------
+
 .mz-geolocator {
   top: 122px !important;
 }
+
+.leaflet-touch .mz-geolocator {
+  top: 60px !important;
+  left: auto;
+  right: 10px;
+}
+
+.leaflet-touch .mz-geolocator-button {
+  /* mimic leaflet-bar */
+  border: 2px solid rgba(0,0,0,0.2);
+  background-clip: padding-box;
+  box-shadow: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px; /* ??? */
+}
+
+.leaflet-touch .mz-geolocator-icon {
+  background-size: 60%;
+}
+
 
 #pin {
   position: absolute;

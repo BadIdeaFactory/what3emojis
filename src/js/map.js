@@ -2,9 +2,8 @@
 
 var L = require('leaflet')
 var LHash = require('leaflet-hash')
-var geocoder = require('leaflet-geocoder')
-//var geohash = require('geohash-emoji')
-var geohash = require('../../js/geohash.js')
+var geocoder = require('pelias-leaflet-geocoder')
+var geohash = require('geohash-emoji')
 var emojione = require('emojione')
 
 // Create a basic Leaflet map
