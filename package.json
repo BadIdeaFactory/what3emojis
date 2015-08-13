@@ -11,7 +11,7 @@
     "leaflet": "^0.7.3",
     "leaflet-hash": "^0.2.1",
     "mapzen-ui": "git+https://github.com/mapzen/ui.git#0.4.0",
-    "pelias-leaflet-geocoder": "git+https://github.com/pelias/leaflet-geocoder.git#v0.0.3"
+    "pelias-leaflet-geocoder": "git+https://github.com/pelias/leaflet-geocoder.git#v1.0.0-alpha"
   },
   "devDependencies": {
     "browserify": "^11.0.1",
