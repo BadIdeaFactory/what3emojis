@@ -23,11 +23,12 @@ L.tileLayer(tileUrl + '?access_token=' + accessToken, {
 var hash = new L.Hash(map)
 
 // Add Pelias geocoding plugin
-L.control.geocoder({
-  drop_pin: false,
-  point_icon: '../css/img/point_icon.png',
-  polygon_icon: '../css/img/polygon_icon.png',
-  full_width: false, // Handle this ourselves.
+var pelias = new L.Control.Geocoder(null, {
+  markers: false,
+  pointIcon: '../css/img/point_icon.png',
+  polygonIcon: '../css/img/polygon_icon.png',
+  expanded: true,
+  fullWidth: false, // Handle this ourselves.
 }).addTo(map);
 
 map.on('moveend', getEmoji)
@@ -45,4 +46,9 @@ function getEmoji () {
   var emoji = geohash.coordAt(lat, lng)
   var output = emojione.unicodeToImage(emoji)
   document.getElementById('emojis').innerHTML = output
+  setTitle(emoji)
+}
+
+function setTitle (emoji) {
+  document.title = emoji + ' · what3emojis map'
 }

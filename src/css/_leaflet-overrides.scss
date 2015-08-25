@@ -4,7 +4,7 @@
 @import '../../node_modules/pelias-leaflet-geocoder/dist/pelias-leaflet-geocoder.css';
 
 /* Leaflet and Pelias overrides */
-.leaflet-pelias-search-icon {
+.leaflet-bar a.leaflet-pelias-search-icon {
   background-image: url("../img/search.png");
   width: 40px;
   background-size: 24px;
@@ -42,7 +42,7 @@
 
 @media only screen and (max-width: 650px) {
   .leaflet-pelias-control.leaflet-pelias-expanded {
-    width: calc(100% - 100px)
+    width: calc(100% - 60px)
   }
 
   .leaflet-left .leaflet-pelias-control {
@@ -82,16 +82,7 @@ only screen and (min-device-pixel-ratio: 2) {
 }
 
 .leaflet-pelias-input {
-  padding-left: 34px;
-}
-
-.leaflet-pelias-results {
-  top: 36px;
-}
-
-.leaflet-touch .leaflet-pelias-results {
-  top: 40px;
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.2) !important;
+  padding-left: 40px;
 }
 
 .leaflet-control-attribution {
