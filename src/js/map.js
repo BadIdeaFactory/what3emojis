@@ -23,7 +23,7 @@ L.tileLayer(tileUrl + '?access_token=' + accessToken, {
 var hash = new L.Hash(map)
 
 // Add Pelias geocoding plugin
-var pelias = new L.Control.Geocoder(null, {
+var pelias = new L.Control.Geocoder('search-zgL8cJI', {
   markers: false,
   pointIcon: '../css/img/point_icon.png',
   polygonIcon: '../css/img/polygon_icon.png',

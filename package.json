@@ -1,6 +1,6 @@
 {
   "name": "what3emojis",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "The best way to address the world using humanity's only common, unambiguous language",
   "main": "index.js",
   "dependencies": {
