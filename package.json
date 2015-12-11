@@ -4,14 +4,14 @@
   "description": "The best way to address the world using humanity's only common, unambiguous language",
   "main": "index.js",
   "dependencies": {
-    "bootstrap-sass": "^3.3.5",
+    "bootstrap-sass": "^3.3.6",
     "emojione": "^1.5.2",
     "geohash-emoji": "^1.3.0",
     "jquery": "^2.1.4",
     "leaflet": "^1.0.0-beta.2",
     "leaflet-hash": "^0.2.1",
     "mapzen-ui": "git+https://github.com/mapzen/ui.git#0.4.0",
-    "leaflet-geocoder-mapzen": "^1.3.0"
+    "leaflet-geocoder-mapzen": "^1.4.0"
   },
   "devDependencies": {
     "browserify": "^12.0.1",
@@ -21,8 +21,8 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cssimport": "^2.1.1-b",
     "gulp-livereload": "^3.8.1",
-    "gulp-minify-css": "^1.2.1",
-    "gulp-sass": "^2.1.0",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",

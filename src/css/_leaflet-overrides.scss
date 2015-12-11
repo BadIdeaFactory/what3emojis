@@ -62,6 +62,11 @@
   }
 }
 
+// override vertical-align: middle applied to all imgs
+img.leaflet-pelias-layer-icon {
+  vertical-align: top;
+}
+
 /* Hide zoom controls on mobile */
 @media only screen and (max-width: 650px) {
   .leaflet-touch .leaflet-control-zoom {
