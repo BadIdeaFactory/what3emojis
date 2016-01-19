@@ -11,25 +11,19 @@
 </head>
 <body class='main'>
 
-  <nav class='navbar navbar-default navbar-inverse'>
-    <div class='container-fluid'>
-      <div class='navbar-header'>
-        <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
-          <span class='sr-only'>Toggle navigation</span>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-        </button>
-        <a class='navbar-brand' href='/'>what3emojis<span class='beta'>beta</span></a>
-      </div>
-      <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
-        <ul class='nav navbar-nav navbar-right'>
-          <li><a href='/'>About</a></li>
-          <li><a href='https://github.com/louh/what3emojis/'>GitHub</a></li>
-          <li class='map'><a href='/map'>Explore map</a></li>
-          <li class='login'><a href='/login'>Custom emoji</a></li>
-        </ul>
-      </div>
+  <nav class='navbar navbar-dark bg-primary'>
+    <button type='button' class='navbar-toggler hidden-sm-up' data-toggle='collapse' data-target='#navbar-collapse' aria-expanded='false'>
+      <span class='sr-only'>Toggle navigation</span>
+      &#9776;
+    </button>
+    <div class='collapse navbar-toggleable-xs' id='navbar-collapse'>
+      <a class='navbar-brand' href='/'>what3emojis<span class='beta'>beta</span></a>
+      <ul class='nav navbar-nav pull-xs-right'>
+        <li class='nav-item'><a class='nav-link' href='/'>About</a></li>
+        <li class='nav-item'><a class='nav-link' href='https://github.com/louh/what3emojis/'>GitHub</a></li>
+        <li class='nav-item map'><a class='nav-link' href='/map'>Explore map</a></li>
+        <li class='nav-item login'><a class='nav-link' href='/login'>Custom emoji</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -111,7 +105,7 @@
         <p>
           Communicate a precise and unambiguous location to your friends, family and online retailers. With just three emoji, you can get packages delivered right to your doorstep and never accidentally to one of your neighbors!
         </p>
-        <a href='/map' class='btn btn-default btn-md'>Find your address</a>
+        <a href='/map' class='btn btn-primary btn-md'>Find your address</a>
       </div>
     </div>
   </div>
@@ -132,7 +126,7 @@
       <div class='row'>
         <div class='col-md-10 col-md-offset-1'>
           <p class='lead'><strong>What3Emojis is an OPEN open source project.</strong> It’s hosted, developed, and maintained on GitHub. Jump in and help us build the future of emoji-based world addressing.</p>
-          <a href='https://github.com/louh/what3emojis' class='btn btn-default btn-lg'>View project on GitHub</a>
+          <a href='https://github.com/louh/what3emojis' class='btn btn-primary btn-lg'>View project on GitHub</a>
         </div>
       </div>
     </div>
@@ -177,7 +171,7 @@
   <div class='copyright'>
     <div class='container'>
       &copy; 2016 what3emojis
-      <span class='pull-right'>Made with 100% unobtainium.</span>
+      <span class='pull-xs-right'>Made with 100% unobtainium.</span>
     </div>
   </div>
 

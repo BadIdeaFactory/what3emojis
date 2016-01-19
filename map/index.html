@@ -16,24 +16,19 @@
 </head>
 <body class='map'>
 
-  <nav class='navbar navbar-default navbar-inverse'>
-    <div class='container-fluid'>
-      <div class='navbar-header'>
-        <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
-          <span class='sr-only'>Toggle navigation</span>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-        </button>
-        <a class='navbar-brand' href='/'>what3emojis<span class='beta'>beta</span></a>
-      </div>
-      <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
-        <ul class='nav navbar-nav navbar-right'>
-          <li><a href='/'>About</a></li>
-          <li><a href='https://github.com/louh/what3emojis/'>GitHub</a></li>
-          <li class='login'><a href='/login'>Custom emoji</a></li>
-        </ul>
-      </div>
+  <nav class='navbar navbar-dark bg-primary'>
+    <button type='button' class='navbar-toggler hidden-sm-up' data-toggle='collapse' data-target='#navbar-collapse' aria-expanded='false'>
+      <span class='sr-only'>Toggle navigation</span>
+      &#9776;
+    </button>
+    <div class='collapse navbar-toggleable-xs' id='navbar-collapse'>
+      <a class='navbar-brand' href='/'>what3emojis<span class='beta'>beta</span></a>
+      <ul class='nav navbar-nav pull-xs-right'>
+        <li class='nav-item'><a class='nav-link' href='/'>About</a></li>
+        <li class='nav-item'><a class='nav-link' href='https://github.com/louh/what3emojis/'>GitHub</a></li>
+        <li class='nav-item map'><a class='nav-link' href='/map'>Explore map</a></li>
+        <li class='nav-item login'><a class='nav-link' href='/login'>Custom emoji</a></li>
+      </ul>
     </div>
   </nav>
 

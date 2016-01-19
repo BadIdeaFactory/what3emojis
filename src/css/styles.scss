@@ -2,8 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Roboto:200,400,300,300italic');
 
-$primary-color: #ea222e;
-
 @import 'bootstrap-variables';
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
@@ -38,6 +36,8 @@ body {
   background-image: url(/img/slideshow01.jpg);
   background-size: cover;
   background-position: center center;
+  border-radius: 0;
+  color: white;
 
   @include media-breakpoint-up(md) {
     padding-top: 200px;
@@ -124,7 +124,7 @@ body.login {
   font-weight: 300;
   font-size: 16px;
   font-family: 'Maven Pro', sans-serif;
-  background-color: $primary-color;
+  background-color: $brand-primary;
   box-shadow: 0 2px 0 #c4101c;
 
   @include media-breakpoint-up(md) {
@@ -283,11 +283,12 @@ footer {
   color: #eee;
   padding-top: 40px;
   padding-bottom: 40px;
+  font-size: 0.85rem;
 
   h4 {
     text-transform: uppercase;
-    margin-bottom: 20px;
-    font-size: 14px;
+    margin-bottom: 1em;
+    font-size: 1rem;
   }
 
   ul {

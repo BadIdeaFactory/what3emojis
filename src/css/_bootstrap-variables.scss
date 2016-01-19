@@ -1,20 +1,28 @@
-$border-radius-base: 2px;
+
+$brand-primary: #ea222e;
+
+$border-radius: 2px;
+$border-radius-lg: .25rem;
+
+$font-size-lg: 1.1rem;
 
 //== Buttons
 
-$btn-default-color: white;
-$btn-default-bg: $primary-color;
-$btn-default-border: transparent;
-$btn-border-radius-base: $border-radius-base;
-$btn-border-radius-large: $border-radius-base;
-$btn-border-radius-small: $border-radius-base;
+$btn-primary-bg: $brand-primary;
+$btn-primary-border: transparent;
+$btn-border-radius-lg: $border-radius-lg;
+
+$btn-padding-x: 1.5rem;
+$btn-padding-y: 1rem;
+$btn-padding-x-lg: 2rem;
+$btn-padding-y-lg: 1.25rem;
 
 //== Navbar
 
 $navbar-margin-bottom: 0;
 $navbar-border-radius: 0;
 $navbar-inverse-color: white;
-$navbar-inverse-bg: $primary-color;
+$navbar-inverse-bg: $brand-primary;
 $navbar-inverse-border: transparent;
 $navbar-inverse-link-color: white;
 $navbar-inverse-brand-color: white;
