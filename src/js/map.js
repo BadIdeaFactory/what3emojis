@@ -5,12 +5,11 @@ var LHash = require('leaflet-hash')
 var geocoder = require('leaflet-geocoder-mapzen')
 var geohash = require('geohash-emoji')
 var emojione = require('emojione')
+require('leaflet.locatecontrol')
 
 // Create a basic Leaflet map
 var accessToken = 'pk.eyJ1IjoibG91IiwiYSI6IkJDYlg3REEifQ.9BLp9eUdT11kUy1jgujSsQ'
 var map = L.map('map').setView([51.4700, 0.2592], 12)
-
-var geolocator = require('mapzen-ui/src/components/geolocator/geolocator.js')(map)
 
 var tileUrl = 'https://api.mapbox.com/v4/lou.n26nngnj/{z}/{x}/{y}.png'
 if (window.devicePixelRatio >= 2) {
@@ -21,6 +20,16 @@ L.tileLayer(tileUrl + '?access_token=' + accessToken, {
 }).addTo(map)
 
 var hash = new L.Hash(map)
+
+// Geolocator
+L.control.locate({
+  drawCircle: false,
+  follow: false,
+  showPopup: false,
+  markerStyle: {
+    opacity: 0,
+  }
+}).addTo(map)
 
 // Add Pelias geocoding plugin
 var pelias = new L.Control.Geocoder('search-zgL8cJI', {

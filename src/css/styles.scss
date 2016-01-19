@@ -9,6 +9,7 @@
 @import 'buttons';
 
 @import 'map'; // Map page base
+@import '../../node_modules/leaflet.locatecontrol/src/L.Control.Locate';
 @import 'leaflet-overrides';
 
 body.main {
@@ -17,12 +18,6 @@ body.main {
 
 body {
   font-family: 'Roboto', sans-serif;
-}
-
-@media (min-width: 768px) {
-  .jumbotron {
-      padding: 80px 0;
-  }
 }
 
 .jumbotron {
@@ -40,6 +35,7 @@ body {
   color: white;
 
   @include media-breakpoint-up(md) {
+    padding: 70px 0;
     padding-top: 200px;
     padding-bottom: 120px;
   }

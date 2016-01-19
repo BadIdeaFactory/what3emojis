@@ -19,16 +19,12 @@ $btn-padding-y-lg: 1.25rem;
 
 //== Navbar
 
-$navbar-margin-bottom: 0;
 $navbar-border-radius: 0;
-$navbar-inverse-color: white;
-$navbar-inverse-bg: $brand-primary;
-$navbar-inverse-border: transparent;
-$navbar-inverse-link-color: white;
-$navbar-inverse-brand-color: white;
-$navbar-inverse-toggle-hover-bg: rgba(255, 255, 255, 0.25);
-$navbar-inverse-toggle-icon-bar-bg: #fff;
-$navbar-inverse-toggle-border-color: transparent;
+
+$navbar-dark-color: white;
+$navbar-dark-hover-color: white;
+$navbar-dark-active-color: white;
+$navbar-dark-disabled-color: white;
 
 //== Jumbotron
 

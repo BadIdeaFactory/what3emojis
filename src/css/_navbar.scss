@@ -35,10 +35,11 @@
     border-bottom-width: 0 !important;
     box-shadow: 0 2px 0 0 lightgray;
 
-    a,
-    a:hover,
-    a:active,
-    a:visited {
+    // Bootstrap overrides
+    .nav-link,
+    .nav-link:hover,
+    .nav-link:active,
+    .nav-link:visited {
       color: #ea222e;
     }
   }
@@ -46,7 +47,7 @@
 
 @include media-breakpoint-up(md) {
   .navbar-nav {
-    padding-top: 8px;
+    padding-top: 2px;
 
     li {
       margin-left: 8px;
@@ -69,9 +70,9 @@
       border-bottom: 2px solid white;
     }
 
-    // Bootstrap override
-    > li > a {
-      padding: 7px 10px;
+    .nav-link {
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
     }
   }
 }
