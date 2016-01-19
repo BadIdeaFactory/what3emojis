@@ -44,7 +44,7 @@
   }
 }
 
-@media (min-width: $grid-float-breakpoint) {
+@include media-breakpoint-up(md) {
   .navbar-nav {
     padding-top: 8px;
 

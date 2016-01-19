@@ -29,7 +29,7 @@ var pelias = new L.Control.Geocoder('search-zgL8cJI', {
   polygonIcon: '../css/img/polygon_icon.png',
   expanded: true,
   fullWidth: false, // Handle this ourselves.
-}).addTo(map);
+}).addTo(map)
 
 map.on('moveend', getEmoji)
 

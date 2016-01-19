@@ -1,11 +1,11 @@
 @charset 'utf-8';
 
-@import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Roboto:200,400,300,300italic);
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Roboto:200,400,300,300italic');
 
 $primary-color: #ea222e;
 
 @import 'bootstrap-variables';
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
 @import 'navbar';
 @import 'buttons';
@@ -39,13 +39,13 @@ body {
   background-size: cover;
   background-position: center center;
 
-  @media (min-width: $grid-float-breakpoint) {
+  @include media-breakpoint-up(md) {
     padding-top: 200px;
     padding-bottom: 120px;
   }
 
   .lead {
-    @media (min-width: $grid-float-breakpoint) {
+    @include media-breakpoint-up(md) {
       width: 85%;
       font-size: 2.25em;
       margin: 0 auto;
@@ -55,7 +55,7 @@ body {
   .container {
     max-width: 85%;
 
-    @media (min-width: $grid-float-breakpoint) {
+    @include media-breakpoint-up(md) {
       max-width: 100%;
     }
   }
@@ -84,7 +84,7 @@ body.login {
 .jumbotron-button {
   margin-top: 40px;
 
-  @media (min-width: $grid-float-breakpoint) {
+  @include media-breakpoint-up(md) {
     margin-top: 80px;
   }
 }
@@ -127,7 +127,7 @@ body.login {
   background-color: $primary-color;
   box-shadow: 0 2px 0 #c4101c;
 
-  @media (min-width: $grid-float-breakpoint) {
+  @include media-breakpoint-up(md) {
     display: inline-block;
     padding: 26px 32px;
     width: auto;
@@ -233,7 +233,7 @@ body.login {
     background-color: rgba(0,0,0,0.65);
     padding: 40px;
 
-    @media (min-width: $grid-float-breakpoint) {
+    @include media-breakpoint-up(md) {
       position: absolute;
       top: 0;
       right: 0;
@@ -244,7 +244,7 @@ body.login {
     }
   }
 
-  @media (min-width: $grid-float-breakpoint) {
+  @include media-breakpoint-up(md) {
     .overlay-text {
       align-self: flex-end;
     }
