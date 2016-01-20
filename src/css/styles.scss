@@ -43,16 +43,16 @@ body {
   .lead {
     @include media-breakpoint-up(md) {
       width: 85%;
-      font-size: 2.25em;
+      font-size: 2em;
       margin: 0 auto;
     }
   }
 
   .container {
-    max-width: 85%;
+    max-width: 100%;
 
     @include media-breakpoint-up(md) {
-      max-width: 100%;
+      max-width: 85%;
     }
   }
 }
@@ -175,7 +175,7 @@ body.login {
 
 .triptych {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   .emojione {
     width: 128px;
@@ -319,4 +319,8 @@ footer {
   padding: 20px 0;
   color: #aaa;
   font-size: 12px;
+}
+
+.subscribe .button {
+  padding: 6px 10px;
 }

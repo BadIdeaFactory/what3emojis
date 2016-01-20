@@ -26,7 +26,7 @@
   li.map {
     border: 2px solid white;
     border-radius: 2px;
-    margin: auto 10px;
+    // margin: auto 10px;
   }
 
   li.map {
@@ -43,15 +43,20 @@
       color: #ea222e;
     }
   }
+
+  .nav-link {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
 }
 
 @include media-breakpoint-up(md) {
   .navbar-nav {
     padding-top: 2px;
 
-    li {
-      margin-left: 8px;
-    }
+    // li {
+    //   margin-left: 8px;
+    // }
 
     li.login,
     li.map {
@@ -62,17 +67,12 @@
       margin-top: -2px;
 
       // Override all other margins
-      margin-left: 16px;
-      margin-right: 0;
+      // margin-left: 16px;
+      // margin-right: 0;
     }
 
     li:hover {
       border-bottom: 2px solid white;
-    }
-
-    .nav-link {
-      padding-left: 0.6rem;
-      padding-right: 0.6rem;
     }
   }
 }
