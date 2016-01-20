@@ -76,3 +76,27 @@
     }
   }
 }
+
+// For Bootstrap v4, have to do all our own collapsible styling
+.navbar-toggleable-xs.collapse.in,
+.navbar-toggleable-xs.collapsing {
+  width: 100%;
+  .navbar-nav {
+    // Recreate collapsed effect from Bootstrap 3
+    width: calc(100% + 2em);
+    border-top: 1px solid #fff;
+    margin-left: -1em;
+    margin-right: -1em;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    padding: 0.5em 1em;
+
+    // Force items to stack
+    li {
+      display: block;
+      float: none;
+      margin: 0;
+      line-height: 32px; // Bigger hit area
+    }
+  }
+}
