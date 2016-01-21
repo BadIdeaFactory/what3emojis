@@ -9,7 +9,9 @@ var paths = {
   scripts: 'src/js/**/*.js'
 }
 
-gulp.task('default', ['css', 'js', 'watch'])
+gulp.task('default', ['build', 'watch'])
+
+gulp.task('build', ['css', 'js'])
 
 gulp.task('css', function () {
   var sass = require('gulp-sass')
@@ -22,7 +24,7 @@ gulp.task('css', function () {
     .pipe(autoprefix('last 2 versions'))
     .pipe(cssimport())
     .pipe(minifyCSS({ keepSpecialComments: 0 }))
-    .pipe(gulp.dest('site/css/'))
+    .pipe(gulp.dest('public/css/'))
     .pipe(livereload())
 })
 
@@ -51,7 +53,7 @@ gulp.task('js', function () {
         .pipe(uglify())
         .on('error', gutil.log)
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('site/js/'))
+      .pipe(gulp.dest('public/js/'))
   })
 
   return es.merge.apply(null, tasks)

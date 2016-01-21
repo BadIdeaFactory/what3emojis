@@ -1,0 +1,19 @@
+machine:
+  node:
+    version: 5.5.0
+
+dependencies:
+  post:
+    - npm install -g gulp
+
+test:
+  override:
+    - echo 'no tests :·['
+
+deployment:
+  production:
+    branch: master
+    owner: circleci
+    commands:
+      - gulp build
+      - sftp -b ./deploy $PRODUCTION_USERNAME@$PRODUCTION_HOSTNAME
