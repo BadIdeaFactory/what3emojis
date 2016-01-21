@@ -25,3 +25,10 @@ build/Release
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
+
+.DS_Store
+
+# Generated files
+dist/css/styles.css
+dist/js/*.js
+dist/js/*.map
