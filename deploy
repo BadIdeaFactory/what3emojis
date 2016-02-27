@@ -1,1 +1,9 @@
 # placeholder for sftp commands
+cd /home/public/
+put -r css
+put -r img
+put -r js
+put -r login
+put -r map
+put index.html
+bye
