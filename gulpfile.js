@@ -24,7 +24,7 @@ gulp.task('css', function () {
     .pipe(autoprefix('last 2 versions'))
     .pipe(cssimport())
     .pipe(minifyCSS({ keepSpecialComments: 0 }))
-    .pipe(gulp.dest('public/css/'))
+    .pipe(gulp.dest('css/'))
     .pipe(livereload())
 })
 
@@ -53,7 +53,7 @@ gulp.task('js', function () {
         .pipe(uglify())
         .on('error', gutil.log)
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('public/js/'))
+      .pipe(gulp.dest('js/'))
   })
 
   return es.merge.apply(null, tasks)
