@@ -32,7 +32,7 @@ L.control.locate({
 }).addTo(map)
 
 // Add Pelias geocoding plugin
-var pelias = new L.Control.Geocoder('search-zgL8cJI', {
+var pelias = new L.Control.Geocoder('mapzen-Avx2J6H', {
   markers: false,
   pointIcon: '../css/img/point_icon.png',
   polygonIcon: '../css/img/polygon_icon.png',
