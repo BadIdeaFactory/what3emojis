@@ -17,14 +17,14 @@ gulp.task('css', function () {
   var sass = require('gulp-sass')
   var autoprefix = require('gulp-autoprefixer')
   var cssimport = require('gulp-cssimport')
-  var minifyCSS = require('gulp-minify-css')
+  var cleanCSS = require('gulp-clean-css')
 
   gulp.src('src/css/styles.scss')
     .pipe(sass())
     .pipe(autoprefix('last 2 versions'))
     .pipe(cssimport())
-    .pipe(minifyCSS({ keepSpecialComments: 0 }))
-    .pipe(gulp.dest('css/'))
+    .pipe(cleanCSS({ level: { 1: { specialComments: 0 }}}))
+    .pipe(gulp.dest('public/css/'))
     .pipe(livereload())
 })
 
@@ -53,7 +53,7 @@ gulp.task('js', function () {
         .pipe(uglify())
         .on('error', gutil.log)
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('js/'))
+      .pipe(gulp.dest('public/js/'))
   })
 
   return es.merge.apply(null, tasks)
