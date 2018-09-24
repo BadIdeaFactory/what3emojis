@@ -29,6 +29,5 @@ node_modules
 .DS_Store
 
 # Generated files
-public/css/styles.css
-public/js/*.js
-public/js/*.map
+dist/
+.cache

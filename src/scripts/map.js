@@ -31,12 +31,16 @@ L.control.locate({
   }
 }).addTo(map)
 
+// Bundle
+const pointIcon = require('../images/point_icon.png')
+const polygonIcon = require('../images/polygon_icon.png')
+
 // Add Pelias geocoding plugin
 var pelias = new L.Control.Geocoder('ge-1793afb81c0a7784', {
   url: 'https://api.geocode.earth/v1',
   markers: false,
-  pointIcon: '../css/img/point_icon.png',
-  polygonIcon: '../css/img/polygon_icon.png',
+  pointIcon: pointIcon,
+  polygonIcon: polygonIcon,
   expanded: true,
   fullWidth: false, // Handle this ourselves.
 }).addTo(map)

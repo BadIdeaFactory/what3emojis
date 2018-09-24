@@ -28,7 +28,7 @@ body {
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   background-repeat: no-repeat;
-  background-image: url(/img/slideshow01.jpg);
+  background-image: url('../images/slideshow01.jpg');
   background-size: cover;
   background-position: center center;
   border-radius: 0;
@@ -59,7 +59,7 @@ body {
 
 body.login {
   .jumbotron {
-    background-image: url(/img/slideshow02.jpg);
+    background-image: url('../images/slideshow02.jpg');
   }
   .jumbotron .container {
     padding: 40px;
