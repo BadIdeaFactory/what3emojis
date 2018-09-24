@@ -14,26 +14,14 @@
     "leaflet.locatecontrol": "^0.61.0"
   },
   "devDependencies": {
-    "browserify": "^14.4.0",
-    "event-stream": "^3.3.4",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.4.1",
-    "gulp-cssimport": "^5.0.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
     "http-server": "^0.10.0",
     "node-sass": "4.9.3",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "parcel-bundler": "1.9.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build",
-    "start": "http-server"
+    "build": "parcel build src/**/*.html",
+    "start": "parcel src/**/*.html"
   },
   "repository": {
     "type": "git",
