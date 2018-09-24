@@ -35,8 +35,8 @@ L.control.locate({
 var pelias = new L.Control.Geocoder('ge-1793afb81c0a7784', {
   url: 'https://api.geocode.earth/v1',
   markers: false,
-  pointIcon: '../css/img/point_icon.png',
-  polygonIcon: '../css/img/polygon_icon.png',
+  pointIcon: '../images/point_icon.png',
+  polygonIcon: '../images/polygon_icon.png',
   expanded: true,
   fullWidth: false, // Handle this ourselves.
 }).addTo(map)
