@@ -21,7 +21,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build src/**/*.html",
+    "build": "parcel build src/index.html src/**/*.html",
     "start": "parcel src/**/*.html"
   },
   "repository": {
