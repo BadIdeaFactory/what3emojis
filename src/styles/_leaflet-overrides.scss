@@ -1,16 +1,13 @@
 // TODO: Streamline
 
-// Inline the leaflet-geocoder styles
-@import '../../node_modules/leaflet-geocoder-mapzen/dist/leaflet-geocoder-mapzen.css';
-
 /* Leaflet and Pelias overrides */
 .leaflet-bar a.leaflet-pelias-search-icon {
-  background-image: url("../img/search.png");
+  background-image: url("../images/search.png");
   width: 40px;
   background-size: 24px;
 }
 .leaflet-pelias-control.leaflet-pelias-expanded .leaflet-pelias-search-icon {
-  background-image: url("../img/search.png");
+  background-image: url("../images/search.png");
 }
 .leaflet-left .leaflet-pelias-control {
   margin-left: -150px;
@@ -79,10 +76,10 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
   .leaflet-pelias-search-icon {
-    background-image: url("../img/search@2x.png");
+    background-image: url("../images/search@2x.png");
   }
   .leaflet-pelias-control.leaflet-pelias-expanded .leaflet-pelias-search-icon {
-    background-image: url("../img/search@2x.png");
+    background-image: url("../images/search@2x.png");
   }
 }
 
