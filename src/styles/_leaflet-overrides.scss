@@ -1,8 +1,5 @@
 // TODO: Streamline
 
-// Inline the leaflet-geocoder styles
-@import '../../node_modules/leaflet-geocoder-mapzen/dist/leaflet-geocoder-mapzen';
-
 /* Leaflet and Pelias overrides */
 .leaflet-bar a.leaflet-pelias-search-icon {
   background-image: url("../images/search.png");
