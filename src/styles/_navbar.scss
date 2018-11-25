@@ -1,102 +1,11 @@
-
-.navbar {
-  z-index: 3000;
-}
-
-.navbar-brand {
-  font-weight: 300;
-
-  .beta {
-    font-size: 0.65em;
-    margin-left: 0.2em;
-    vertical-align: sub;
-  }
-}
-
-.navbar-nav {
-  font-family: 'Maven Pro', sans-serif;
-  text-align: center;
-
-  li {
-    font-weight: 700;
-    font-size: 13px;
-  }
-
-  li.login,
-  li.map {
-    border: 2px solid white;
-    border-radius: 2px;
-    // margin: auto 10px;
-  }
-
-  li.map {
-    background-color: white;
-    font-weight: 400;
-    border-bottom-width: 0 !important;
-    box-shadow: 0 2px 0 0 lightgray;
-
-    // Bootstrap overrides
-    .nav-link,
-    .nav-link:hover,
-    .nav-link:active,
-    .nav-link:visited {
-      color: #ea222e;
-    }
-  }
-
-  .nav-link {
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
-  }
-}
-
 @include media-breakpoint-up(md) {
   .navbar-nav {
-    padding-top: 2px;
-
-    // li {
-    //   margin-left: 8px;
-    // }
-
-    li.login,
-    li.map {
-      border: 2px solid white;
-      border-radius: 2px;
-
-      // Vertical alignment
-      margin-top: -2px;
-
-      // Override all other margins
-      // margin-left: 16px;
-      // margin-right: 0;
+    li > a {
+      border-bottom: 1px solid transparent;
     }
 
-    li:hover {
-      border-bottom: 2px solid white;
-    }
-  }
-}
-
-// For Bootstrap v4, have to do all our own collapsible styling
-.navbar-toggleable-xs.collapse.in,
-.navbar-toggleable-xs.collapsing {
-  width: 100%;
-  .navbar-nav {
-    // Recreate collapsed effect from Bootstrap 3
-    width: calc(100% + 2em);
-    border-top: 1px solid #fff;
-    margin-left: -1em;
-    margin-right: -1em;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
-    padding: 0.5em 1em;
-
-    // Force items to stack
-    li {
-      display: block;
-      float: none;
-      margin: 0;
-      line-height: 32px; // Bigger hit area
+    li:hover > a {
+      border-bottom: 1px solid #0a3049;
     }
   }
 }
