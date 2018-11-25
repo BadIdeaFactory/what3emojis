@@ -1,3 +1,9 @@
+.navbar-brand {
+  img {
+    width: 185px;
+  }
+}
+
 @include media-breakpoint-up(md) {
   .navbar-nav {
     li > a {
