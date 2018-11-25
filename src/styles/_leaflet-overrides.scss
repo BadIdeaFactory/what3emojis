@@ -19,17 +19,17 @@
 .leaflet-pelias-control {
   position: fixed;
   left: 50%;
-  top: 80px;
+  top: 82px;
 }
 
 @media only screen and (max-width: 650px) {
   .leaflet-pelias-control {
-    top: 60px;
+    top: 82px;
   }
 }
 @media only screen and (orientation: landscape) {
   .leaflet-touch .leaflet-pelias-control {
-    top: 60px;
+    top: 82px;
   }
 }
 
@@ -55,7 +55,7 @@
   .leaflet-touch .leaflet-pelias-control.leaflet-pelias-expanded {
     left: 10px;
     margin-left: 0;
-    width: calc(100% - 78px);
+    width: calc(100% - 24px);
   }
 }
 
