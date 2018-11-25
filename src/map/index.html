@@ -8,26 +8,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/1.5.0/assets/css/emojione.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../node_modules/leaflet-geocoder-mapzen/dist/leaflet-geocoder-mapzen.css">
   <link rel="stylesheet" href="../styles/styles.scss">
 </head>
 <body class="map">
 
-  <nav class="navbar navbar-dark bg-primary">
-    <button type="button" class="navbar-toggler hidden-sm-up pull-xs-right" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-      <span class="sr-only">Toggle navigation</span>
-      &#9776;
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+      <img src="../images/logo.svg" alt="What3Emojis" />
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="/">what3emojis<span class="beta">beta</span></a>
-    <div class="collapse navbar-toggleable-xs" id="navbar-collapse">
-      <ul class="nav navbar-nav pull-xs-right">
-        <li class="nav-item"><a class="nav-link" href="/">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://github.com/louh/what3emojis/">GitHub</a></li>
-        <li class="nav-item map"><a class="nav-link" href="/map">Explore map</a></li>
-        <li class="nav-item login"><a class="nav-link" href="/login">Custom emoji</a></li>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/what3emojis/what3emojis/">Code</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/map">Explore map</a>
+        </li>
       </ul>
     </div>
   </nav>

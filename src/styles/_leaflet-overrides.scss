@@ -1,8 +1,5 @@
 // TODO: Streamline
 
-// Inline the leaflet-geocoder styles
-@import '../../node_modules/leaflet-geocoder-mapzen/dist/leaflet-geocoder-mapzen';
-
 /* Leaflet and Pelias overrides */
 .leaflet-bar a.leaflet-pelias-search-icon {
   background-image: url("../images/search.png");
@@ -22,17 +19,17 @@
 .leaflet-pelias-control {
   position: fixed;
   left: 50%;
-  top: 80px;
+  top: 82px;
 }
 
 @media only screen and (max-width: 650px) {
   .leaflet-pelias-control {
-    top: 60px;
+    top: 82px;
   }
 }
 @media only screen and (orientation: landscape) {
   .leaflet-touch .leaflet-pelias-control {
-    top: 60px;
+    top: 82px;
   }
 }
 
@@ -58,7 +55,7 @@
   .leaflet-touch .leaflet-pelias-control.leaflet-pelias-expanded {
     left: 10px;
     margin-left: 0;
-    width: calc(100% - 78px);
+    width: calc(100% - 24px);
   }
 }
 
@@ -102,7 +99,6 @@ only screen and (min-device-pixel-ratio: 2) {
   color: white;
   width: 100%;
   font-size: 10px;
-  font-family: 'Maven Pro';
   float: none;
   text-align: right;
   padding: 3px 6px;

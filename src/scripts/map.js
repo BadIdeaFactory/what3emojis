@@ -47,6 +47,9 @@ var pelias = new L.Control.Geocoder('ge-1793afb81c0a7784', {
 
 map.on('moveend', getEmoji)
 
+// Configure Emoji
+emojione.emojiSize = '64'
+
 getEmoji()
 
 if (document.getElementById('map').className.indexOf('leaflet-touch') > 0) {
@@ -58,7 +61,7 @@ function getEmoji () {
   var lat = center.lat
   var lng = center.lng
   var emoji = geohash.coordAt(lat, lng)
-  var output = emojione.unicodeToImage(emoji)
+  var output = emojione.toImage(emoji)
   document.getElementById('emojis').innerHTML = output
   setTitle(emoji)
 }
