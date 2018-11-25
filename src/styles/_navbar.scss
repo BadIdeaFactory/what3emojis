@@ -1,10 +1,19 @@
 
 .navbar {
   z-index: 3000;
+  height: 90px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-brand {
   font-weight: 300;
+
+  img {
+    width: 185px;
+  }
 
   .beta {
     font-size: 0.65em;
