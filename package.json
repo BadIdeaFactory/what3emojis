@@ -4,20 +4,20 @@
   "description": "The best way to address the world using humanity's only common, unambiguous language",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "4.3.1",
+    "bootstrap": "4.4.1",
     "emojione": "4.5.0",
     "geohash-emoji": "1.3.2",
     "jquery": "3.4.1",
-    "leaflet": "1.5.1",
+    "leaflet": "1.6.0",
     "leaflet-geocoder-mapzen": "1.9.4",
     "leaflet-hash": "0.2.1",
-    "leaflet.locatecontrol": "0.67.0",
-    "popper.js": "1.15.0"
+    "leaflet.locatecontrol": "0.68.0",
+    "popper.js": "1.16.0"
   },
   "devDependencies": {
-    "http-server": "0.11.1",
-    "parcel-bundler": "1.12.3",
-    "sass": "1.22.5"
+    "http-server": "0.12.0",
+    "parcel-bundler": "1.12.4",
+    "sass": "1.23.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
