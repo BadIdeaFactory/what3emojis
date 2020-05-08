@@ -22,7 +22,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build src/index.html src/**/*.html",
-    "start": "parcel src/index.html src/**/*.html"
+    "start": "npm run build && http-server dist"
   },
   "repository": {
     "type": "git",
