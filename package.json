@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/louh/what3emojis.git"
+    "url": "https://github.com/BadIdeaFactory/what3emojis.git"
   },
   "author": "Lou Huang <lou@louhuang.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/louh/what3emojis/issues"
+    "url": "https://github.com/BadIdeaFactory/what3emojis/issues"
   },
-  "homepage": "http://www.what3emojis.com/"
+  "homepage": "https://www.what3emojis.com/"
 }
