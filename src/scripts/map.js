@@ -8,7 +8,7 @@ var emojione = require('emojione')
 require('leaflet.locatecontrol')
 
 // Create a basic Leaflet map
-var accessToken = 'pk.eyJ1IjoibG91IiwiYSI6IkJDYlg3REEifQ.9BLp9eUdT11kUy1jgujSsQ'
+var accessToken = 'pk.eyJ1IjoibG91IiwiYSI6ImNrcDhwN2M0eDAyaG8ydnA5YXB2bWh1d2YifQ.fz9CF1hJCbjc2arfl9EbCg'
 var map = L.map('map').setView([51.4700, 0.2592], 12)
 
 var tileUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}'
