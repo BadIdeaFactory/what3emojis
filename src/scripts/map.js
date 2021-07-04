@@ -5,24 +5,18 @@ var LHash = require('leaflet-hash')
 var geocoder = require('leaflet-geocoder-mapzen')
 var geohash = require('geohash-emoji')
 var emojione = require('emojione')
+var protomaps = require('protomaps')
 require('leaflet.locatecontrol')
 
 // Create a basic Leaflet map
-var accessToken = 'pk.eyJ1IjoibG91IiwiYSI6ImNrcDhwN2M0eDAyaG8ydnA5YXB2bWh1d2YifQ.fz9CF1hJCbjc2arfl9EbCg'
 var map = L.map('map').setView([51.4700, 0.2592], 12)
 
-var tileUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}'
-if (window.devicePixelRatio > 1) {
-  tileUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}@2x?access_token={accessToken}'
-}
-L.tileLayer(tileUrl, {
-  attribution: 'Map imagery © <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, Emoji by <a href="http://emojione.com/">Emoji One</a>',
-  tileSize: 512,
-  maxZoom: 18,
-  zoomOffset: -1,
-  id: 'mapbox/streets-v11',
-  accessToken: accessToken
-}).addTo(map)
+var accessToken = "1b6f5f2a9ad19a57"
+var layer = protomaps.leafletLayer({
+  attribution:'Map imagery © <a href="https://protomaps.com">Protomaps</a> © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, Emoji by <a href="http://emojione.com/">Emoji One</a>',
+  url:'https://api.protomaps.com/tiles/v2/{z}/{x}/{y}.pbf?key=' + accessToken
+})
+layer.addTo(map)
 
 var hash = new L.Hash(map)
 
