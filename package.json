@@ -13,7 +13,7 @@
     "leaflet-hash": "0.2.1",
     "leaflet.locatecontrol": "0.71.1",
     "popper.js": "1.16.1",
-    "protomaps": "0.6.1"
+    "protomaps": "0.15.0"
   },
   "devDependencies": {
     "http-server": "0.12.3",
