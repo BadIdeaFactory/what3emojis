@@ -30,4 +30,4 @@ node_modules
 
 # Generated files
 dist/
-.cache
+.parcel-cache

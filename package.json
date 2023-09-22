@@ -2,7 +2,6 @@
   "name": "what3emojis",
   "version": "0.1.0",
   "description": "The best way to address the world using humanity's only common, unambiguous language",
-  "main": "index.js",
   "dependencies": {
     "bootstrap": "4.4.1",
     "emojione": "4.5.0",
@@ -17,7 +16,7 @@
   },
   "devDependencies": {
     "http-server": "0.12.3",
-    "parcel-bundler": "1.12.4",
+    "parcel": "2.9.3",
     "sass": "1.26.5"
   },
   "scripts": {
