@@ -2,23 +2,24 @@
   "name": "what3emojis",
   "version": "0.1.0",
   "description": "The best way to address the world using humanity's only common, unambiguous language",
-  "main": "index.js",
   "dependencies": {
-    "bootstrap": "4.4.1",
+    "bootstrap": "4.6.2",
     "emojione": "4.5.0",
-    "geohash-emoji": "github:bensheldon/geohash-emoji#reverse-it",
-    "jquery": "3.5.1",
-    "leaflet": "1.7.1",
+    "geohash-emoji": "1.4.2",
+    "jquery": "3.7.1",
+    "leaflet": "1.9.4",
     "leaflet-geocoder-mapzen": "1.9.4",
     "leaflet-hash": "0.2.1",
-    "leaflet.locatecontrol": "0.71.1",
+    "leaflet.locatecontrol": "0.79.0",
     "popper.js": "1.16.1",
-    "protomaps": "0.15.0"
+    "protomaps": "1.23.1"
   },
   "devDependencies": {
-    "http-server": "0.12.3",
-    "parcel-bundler": "1.12.4",
-    "sass": "1.26.5"
+    "@parcel/transformer-sass": "2.9.3",
+    "http-server": "14.1.1",
+    "parcel": "2.9.3",
+    "process": "0.11.10",
+    "sass": "1.68.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
