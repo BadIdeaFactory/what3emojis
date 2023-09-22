@@ -18,7 +18,13 @@ var layer = protomaps.leafletLayer({
 })
 layer.addTo(map)
 
-var hash = new L.Hash(map)
+var urlFragment = decodeURIComponent(window.location.hash).replace('#', '');
+if ([...urlFragment].length == 3) {
+  var location = geohash.coordFromHash(urlFragment);
+  map.setView([location[0], location[1]], 12);
+} else {
+  new L.Hash(map)
+}
 
 // Geolocator
 L.control.locate({
@@ -60,8 +66,14 @@ function getEmoji () {
   var lat = center.lat
   var lng = center.lng
   var emoji = geohash.coordAt(lat, lng)
+  window.location.replace("#" + emoji)
   var output = emojione.toImage(emoji)
-  document.getElementById('emojis').innerHTML = output
+
+  var link = document.createElement('a');
+  link.setAttribute('href', '#' + emoji);
+  link.innerHTML = output;
+
+  document.getElementById('emojis').innerHTML = link.outerHTML
   setTitle(emoji)
 }
 
