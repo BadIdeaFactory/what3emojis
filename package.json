@@ -5,7 +5,7 @@
   "dependencies": {
     "bootstrap": "4.4.1",
     "emojione": "4.5.0",
-    "geohash-emoji": "github:bensheldon/geohash-emoji#reverse-it",
+    "geohash-emoji": "1.4.2",
     "jquery": "3.5.1",
     "leaflet": "1.9.4",
     "leaflet-geocoder-mapzen": "1.9.4",
