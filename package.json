@@ -5,7 +5,7 @@
   "dependencies": {
     "bootstrap": "4.6.2",
     "emojione": "4.5.0",
-    "geohash-emoji": "1.4.2",
+    "geohash-emoji": "1.4.3",
     "jquery": "3.7.1",
     "leaflet": "1.9.4",
     "leaflet-geocoder-mapzen": "1.9.4",
@@ -18,7 +18,8 @@
     "@parcel/transformer-sass": "2.16.4",
     "http-server": "14.1.1",
     "parcel": "2.16.4",
-    "sass": "1.68.0"
+    "sass": "1.68.0",
+    "string.fromcodepoint": "1.0.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
