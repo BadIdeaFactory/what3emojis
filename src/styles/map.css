@@ -76,4 +76,9 @@
   justify-content: center;
   align-items: center;
   width: 48px;
+  margin-right: 0.2em;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 }

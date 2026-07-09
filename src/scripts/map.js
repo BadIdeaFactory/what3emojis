@@ -84,6 +84,9 @@ function getEmoji() {
  * @example
  * splitEmoji("😴😄😃⛔🎠🚓🚇") // ['😴', '😄', '😃', '⛔', '🎠', '🚓', '🚇']
  * 
+ * @todo
+ * (bug) This incorrectly splits '🗃📠🏾' into two segments instead of 3.
+ *
  * @param {string} emojiHash 
  * @returns string[] array of emojis
  */
