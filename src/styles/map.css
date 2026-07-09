@@ -66,16 +66,14 @@
 }
 
 #emojis {
-  text-align: center;
-  font-size: 3em;
-  line-height: 58px;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5em;
 }
 
-img.emojione {
-  width: 32px;
-  height: 32px;
-}
-
-img.emojione:not(:last-of-type) {
-  margin-right: 16px;
+.emoji-character {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
 }
