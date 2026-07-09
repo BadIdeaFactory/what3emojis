@@ -5,8 +5,8 @@ var LHash = require('leaflet-hash')
 var geocoder = require('leaflet-geocoder-mapzen')
 var geohash = require('geohash-emoji')
 var emojione = require('emojione')
-var protomaps = require('protomaps')
-require('leaflet.locatecontrol')
+var protomaps = require('protomaps-leaflet')
+import { LocateControl } from 'leaflet.locatecontrol'
 
 // Create a basic Leaflet map
 var map = L.map('map').setView([51.4700, 0.2592], 12)
@@ -27,14 +27,15 @@ if ([...urlFragment].length == 3) {
 }
 
 // Geolocator
-L.control.locate({
+var control = new LocateControl({
   drawCircle: false,
   follow: false,
   showPopup: false,
   markerStyle: {
     opacity: 0,
   }
-}).addTo(map)
+})
+control.addTo(map)
 
 // Bundle
 const pointIcon = require('../images/point_icon.png')

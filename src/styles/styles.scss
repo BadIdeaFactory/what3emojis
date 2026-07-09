@@ -9,7 +9,7 @@
 @import 'buttons';
 
 @import 'map'; // Map page base
-@import '../../node_modules/leaflet.locatecontrol/src/L.Control.Locate';
+@import '../../node_modules/leaflet.locatecontrol/dist/L.Control.Locate.min.css';
 @import 'leaflet-overrides';
 
 body.main {
