@@ -6,9 +6,9 @@
   height: calc(100% - 72px);
 }
 
-//
+/*
 // Borrowed the Mapzen 'Locate me' button
-// -----------------------------------------------
+// ----------------------------------------------- */
 
 .mz-geolocator {
   top: 122px !important;

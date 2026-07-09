@@ -1,4 +1,4 @@
-// TODO: Streamline
+/* TODO: Streamline */
 
 /* Leaflet and Pelias overrides */
 .leaflet-bar a.leaflet-pelias-search-icon {
@@ -59,7 +59,7 @@
   }
 }
 
-// override vertical-align: middle applied to all imgs
+/* override vertical-align: middle applied to all imgs */
 img.leaflet-pelias-layer-icon {
   vertical-align: top;
 }
@@ -87,7 +87,7 @@ only screen and (min-device-pixel-ratio: 2) {
   padding-left: 36px;
 }
 
-// ATTRIBUTION
+/* ATTRIBUTION */
 .leaflet-control-attribution {
   background-color: #58595b;
 }

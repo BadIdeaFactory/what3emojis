@@ -6,11 +6,11 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
 @import 'navbar';
-@import 'buttons';
+@import 'buttons.css';
 
-@import 'map'; // Map page base
+@import 'map.css'; // Map page base
 @import '../../node_modules/leaflet.locatecontrol/dist/L.Control.Locate.min.css';
-@import 'leaflet-overrides';
+@import 'leaflet-overrides.css';
 
 body.main {
   overflow-x: hidden;
