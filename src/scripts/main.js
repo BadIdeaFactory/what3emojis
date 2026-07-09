@@ -1,18 +1,18 @@
-'use strict'
-
 // Require and expose jQuery to window for Bootstrap
-window.$ = window.jQuery = require('jquery')
+import { $, jQuery } from 'jquery'
+window.$ = $
+window.jQuery = jQuery
 
 // Don't require all of Bootstrap, just the parts we need
-// require('bootstrap')
-require('bootstrap/js/dist/util.js')
-// require('bootstrap/js/dist/alert.js')
-require('bootstrap/js/dist/button.js')
-require('bootstrap/js/dist/carousel.js')
-require('bootstrap/js/dist/collapse.js')
-require('bootstrap/js/dist/dropdown.js')
-// require('bootstrap/js/dist/modal.js')
-// require('bootstrap/js/dist/scrollspy.js')
-// require('bootstrap/js/dist/tab.js')
-// require('bootstrap/js/dist/tooltip.js')
-// require('bootstrap/js/dist/popover.js')
+// import 'bootstrap'
+import 'bootstrap/js/dist/util.js'
+// import 'bootstrap/js/dist/alert.js'
+import 'bootstrap/js/dist/button.js'
+import 'bootstrap/js/dist/carousel.js'
+import 'bootstrap/js/dist/collapse.js'
+import 'bootstrap/js/dist/dropdown.js'
+// import 'bootstrap/js/dist/modal.js'
+// import 'bootstrap/js/dist/scrollspy.js'
+// import 'bootstrap/js/dist/tab.js'
+// import 'bootstrap/js/dist/tooltip.js'
+// import 'bootstrap/js/dist/popover.js'

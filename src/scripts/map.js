@@ -1,33 +1,33 @@
-'use strict'
-
-var L = require('leaflet')
-var LHash = require('leaflet-hash')
-var geocoder = require('leaflet-geocoder-mapzen')
-var geohash = require('geohash-emoji')
-var emojione = require('emojione')
-var protomaps = require('protomaps-leaflet')
+import L from 'leaflet'
+import { LHash } from 'leaflet-hash'
+import { geocoder } from 'leaflet-geocoder-mapzen'
+import geohash from 'geohash-emoji'
+import emojione from 'emojione'
+import { leafletLayer } from 'protomaps-leaflet'
 import { LocateControl } from 'leaflet.locatecontrol'
+import pointIcon from 'url:../images/point_icon.png'
+import polygonIcon from 'url:../images/polygon_icon.png'
 
 // Create a basic Leaflet map
-var map = L.map('map').setView([51.4700, 0.2592], 12)
+const map = L.map('map').setView([51.4700, 0.2592], 12)
 
-var accessToken = "1b6f5f2a9ad19a57"
-var layer = protomaps.leafletLayer({
+const accessToken = "1b6f5f2a9ad19a57"
+const layer = leafletLayer({
   attribution:'Map imagery © <a href="https://protomaps.com">Protomaps</a> © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, Emoji by <a href="http://emojione.com/">Emoji One</a>',
   url:'https://api.protomaps.com/tiles/v2/{z}/{x}/{y}.pbf?key=' + accessToken
 })
 layer.addTo(map)
 
-var urlFragment = decodeURIComponent(window.location.hash).replace('#', '');
+const urlFragment = decodeURIComponent(window.location.hash).replace('#', '');
 if ([...urlFragment].length == 3) {
-  var location = geohash.coordFromHash(urlFragment);
+  const location = geohash.coordFromHash(urlFragment);
   map.setView([location[0], location[1]], 12);
 } else {
   new L.Hash(map)
 }
 
 // Geolocator
-var control = new LocateControl({
+const control = new LocateControl({
   drawCircle: false,
   follow: false,
   showPopup: false,
@@ -37,12 +37,8 @@ var control = new LocateControl({
 })
 control.addTo(map)
 
-// Bundle
-const pointIcon = require('../images/point_icon.png')
-const polygonIcon = require('../images/polygon_icon.png')
-
 // Add Pelias geocoding plugin
-var pelias = new L.Control.Geocoder('ge-1793afb81c0a7784', {
+const pelias = new L.Control.Geocoder('ge-1793afb81c0a7784', {
   url: 'https://api.geocode.earth/v1',
   markers: false,
   pointIcon: pointIcon,
@@ -62,15 +58,15 @@ if (document.getElementById('map').className.indexOf('leaflet-touch') > 0) {
   document.body.className += ' leaflet-touch'
 }
 
-function getEmoji () {
-  var center = map.getCenter()
-  var lat = center.lat
-  var lng = center.lng
-  var emoji = geohash.coordAt(lat, lng)
+function getEmoji() {
+  const center = map.getCenter()
+  const lat = center.lat
+  const lng = center.lng
+  const emoji = geohash.coordAt(lat, lng)
   window.location.replace("#" + emoji)
-  var output = emojione.toImage(emoji)
+  const output = emojione.toImage(emoji)
 
-  var link = document.createElement('a');
+  const link = document.createElement('a');
   link.setAttribute('href', '#' + emoji);
   link.innerHTML = output;
 
@@ -78,6 +74,6 @@ function getEmoji () {
   setTitle(emoji)
 }
 
-function setTitle (emoji) {
+function setTitle(emoji) {
   document.title = emoji + ' · what3emojis map'
 }
