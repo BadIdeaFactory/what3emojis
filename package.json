@@ -15,9 +15,9 @@
     "protomaps": "1.23.1"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.9.3",
+    "@parcel/transformer-sass": "2.16.4",
     "http-server": "14.1.1",
-    "parcel": "2.9.3",
+    "parcel": "2.16.4",
     "process": "0.11.10",
     "sass": "1.68.0"
   },
