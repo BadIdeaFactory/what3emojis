@@ -1,49 +1,43 @@
-'use strict'
-
-// Shim `process` for `geohash-emoji` (Parcel will throw error without it)
-require('process')
-var L = require('leaflet')
-var LHash = require('leaflet-hash')
-var geocoder = require('leaflet-geocoder-mapzen')
-var geohash = require('geohash-emoji')
-var emojione = require('emojione')
-var protomaps = require('protomaps')
-require('leaflet.locatecontrol')
+import L from 'leaflet'
+import { LHash } from 'leaflet-hash'
+import { geocoder } from 'leaflet-geocoder-mapzen'
+import geohash from 'geohash-emoji'
+import { leafletLayer } from 'protomaps-leaflet'
+import { LocateControl } from 'leaflet.locatecontrol'
+import pointIcon from 'url:../images/point_icon.png'
+import polygonIcon from 'url:../images/polygon_icon.png'
 
 // Create a basic Leaflet map
-var map = L.map('map').setView([51.4700, 0.2592], 12)
+const map = L.map('map').setView([51.4700, 0.2592], 12)
 
-var accessToken = "1b6f5f2a9ad19a57"
-var layer = protomaps.leafletLayer({
-  attribution:'Map imagery © <a href="https://protomaps.com">Protomaps</a> © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, Emoji by <a href="http://emojione.com/">Emoji One</a>',
+const accessToken = "1b6f5f2a9ad19a57"
+const layer = leafletLayer({
+  attribution:'Map imagery © <a href="https://protomaps.com">Protomaps</a> © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
   url:'https://api.protomaps.com/tiles/v2/{z}/{x}/{y}.pbf?key=' + accessToken
 })
 layer.addTo(map)
 
-var urlFragment = decodeURIComponent(window.location.hash).replace('#', '');
+const urlFragment = decodeURIComponent(window.location.hash).replace('#', '');
 if ([...urlFragment].length == 3) {
-  var location = geohash.coordFromHash(urlFragment);
+  const location = geohash.coordFromHash(urlFragment);
   map.setView([location[0], location[1]], 12);
 } else {
   new L.Hash(map)
 }
 
 // Geolocator
-L.control.locate({
+const control = new LocateControl({
   drawCircle: false,
   follow: false,
   showPopup: false,
   markerStyle: {
     opacity: 0,
   }
-}).addTo(map)
-
-// Bundle
-const pointIcon = require('../images/point_icon.png')
-const polygonIcon = require('../images/polygon_icon.png')
+})
+control.addTo(map)
 
 // Add Pelias geocoding plugin
-var pelias = new L.Control.Geocoder('ge-1793afb81c0a7784', {
+const pelias = new L.Control.Geocoder('ge-1793afb81c0a7784', {
   url: 'https://api.geocode.earth/v1',
   markers: false,
   pointIcon: pointIcon,
@@ -54,31 +48,52 @@ var pelias = new L.Control.Geocoder('ge-1793afb81c0a7784', {
 
 map.on('moveend', getEmoji)
 
-// Configure Emoji
-emojione.emojiSize = '64'
-
 getEmoji()
 
 if (document.getElementById('map').className.indexOf('leaflet-touch') > 0) {
   document.body.className += ' leaflet-touch'
 }
 
-function getEmoji () {
-  var center = map.getCenter()
-  var lat = center.lat
-  var lng = center.lng
-  var emoji = geohash.coordAt(lat, lng)
+function getEmoji() {
+  const center = map.getCenter()
+  const lat = center.lat
+  const lng = center.lng
+  const emoji = geohash.coordAt(lat, lng)
   window.location.replace("#" + emoji)
-  var output = emojione.toImage(emoji)
 
-  var link = document.createElement('a');
-  link.setAttribute('href', '#' + emoji);
-  link.innerHTML = output;
+  const link = document.createElement('a')
+  link.setAttribute('href', '#' + emoji)
 
+  const emojis = splitEmoji(emoji)
+  for (let i = 0; i < emojis.length; i++) {
+    const emojiEl = document.createElement('span')
+    emojiEl.className = 'emoji-character'
+    emojiEl.textContent = emojis[i]
+    link.appendChild(emojiEl)
+  }
+  
   document.getElementById('emojis').innerHTML = link.outerHTML
   setTitle(emoji)
 }
 
-function setTitle (emoji) {
+/**
+ * Utility for splitting the string of emoji returned by geohash.coordAt()
+ * to an array of emoji that we can iterate through. We can't use standard
+ * string.split('') because some emoji are two code points long.
+ * 
+ * @example
+ * splitEmoji("😴😄😃⛔🎠🚓🚇") // ['😴', '😄', '😃', '⛔', '🎠', '🚓', '🚇']
+ * 
+ * @todo
+ * (bug) This incorrectly splits '🗃📠🏾' into two segments instead of 3.
+ *
+ * @param {string} emojiHash 
+ * @returns string[] array of emojis
+ */
+function splitEmoji(emojiHash) {
+  return [...new Intl.Segmenter().segment(emojiHash)].map(x => x.segment)
+}
+
+function setTitle(emoji) {
   document.title = emoji + ' · what3emojis map'
 }

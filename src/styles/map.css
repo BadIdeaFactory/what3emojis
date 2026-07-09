@@ -6,9 +6,9 @@
   height: calc(100% - 72px);
 }
 
-//
+/*
 // Borrowed the Mapzen 'Locate me' button
-// -----------------------------------------------
+// ----------------------------------------------- */
 
 .mz-geolocator {
   top: 122px !important;
@@ -66,16 +66,19 @@
 }
 
 #emojis {
-  text-align: center;
-  font-size: 3em;
-  line-height: 58px;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5em;
 }
 
-img.emojione {
-  width: 32px;
-  height: 32px;
-}
+.emoji-character {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  margin-right: 0.2em;
 
-img.emojione:not(:last-of-type) {
-  margin-right: 16px;
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
