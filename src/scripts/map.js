@@ -1,7 +1,5 @@
 'use strict'
 
-// Shim `process` for `geohash-emoji` (Parcel will throw error without it)
-require('process')
 var L = require('leaflet')
 var LHash = require('leaflet-hash')
 var geocoder = require('leaflet-geocoder-mapzen')
