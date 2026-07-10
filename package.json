@@ -3,15 +3,14 @@
   "version": "0.1.0",
   "description": "The best way to address the world using humanity's only common, unambiguous language",
   "dependencies": {
-    "bootstrap": "4.6.2",
+    "@popperjs/core": "2.11.8",
+    "bootstrap": "5.3.8",
     "emojione": "4.5.0",
     "geohash-emoji": "1.4.4",
-    "jquery": "3.7.1",
     "leaflet": "1.9.4",
     "leaflet-geocoder-mapzen": "1.9.4",
     "leaflet-hash": "0.2.1",
     "leaflet.locatecontrol": "0.90.0",
-    "popper.js": "1.16.1",
     "protomaps-leaflet": "1.24.2"
   },
   "devDependencies": {
